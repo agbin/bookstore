@@ -1,0 +1,47 @@
+{% extends "bookshop/base.html" %}
+{% block content %}
+
+{% load static %}
+
+    {% if form %}
+        <h2>Szukaj:</h2>
+        <form action='{% url "search" %}' method="post">
+            {% csrf_token %}
+            {{form.as_p}}
+            <input type="submit" value="Wduś guzik" class="btn btn-success">
+        </form>
+    {% else %}
+        <h1>Wyszukiwanie: produkty z "{{ name }}" w nazwie</h1><br><br>
+        <ul>
+            {% for product in products %}
+                <li style="font-size:25px"><a href="{% url 'detail' product.id %}">{{ product.name }}</a></li><br>
+            {% empty %}
+            pusto
+
+            {% endfor %}
+        </ul>
+        <h1>Wyszukiwanie: Produkty z kategorii "{{ name }}"</h1><br><br>
+        <ul>
+            {% for category in categories %}
+
+                <li style="font-size:25px"><a href="{% url 'detail' category.id %}">{{ category.name }}</a></li><br>
+            {% empty %}
+            pusto
+            {% endfor %}
+        </ul>
+
+
+        <h1>Wyszukiwanie: produkty autora "{{ name }}"</h1><br><br>
+        <ul>
+            {% for author in authors %}
+                <li style="font-size:25px"><a href="{% url 'detail' author.id %}">{{ author.name }}</a></li><br>
+            {% empty %}
+            pusto
+            {% endfor %}
+        </ul>
+
+
+
+    {% endif %}
+
+{% endblock %}

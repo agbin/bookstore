@@ -1,0 +1,24 @@
+{% extends "bookshop/base.html" %}
+{% block content %}
+
+{% load static %}
+
+
+    <h2>Autorzy:</h2><br>
+
+    {% for author in authors %}
+        <ul>
+            <li><a href="{% url 'authors-products' author.id %}">{{ author.author_last_name }}</a>
+                {% if user.is_authenticated %}
+                    <a href="{% url 'author-update' author.id %}"><input type="submit" value="Edytuj autora" class="btn btn-default"></a>
+                {% endif %}
+            </li>
+        </ul>
+    {% endfor %}
+
+    <br>
+    {% if user.is_authenticated %}
+        <a href="{% url 'author-add' %}"><input type="submit" value="Dodaj autora" class="btn btn-success"></a>
+    {% endif %}
+
+{% endblock %}

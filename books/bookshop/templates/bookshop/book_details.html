@@ -1,0 +1,86 @@
+{% extends "bookshop/base.html" %}
+{% block content %}
+
+{% load static %}
+
+
+<!--<img src="{{ product.book_logo.url }}" class="img-responsive" height='600' width='400' />-->
+<!--<h1>Tytuł: {{ product.name }}</h1><br>-->
+<!--<h2>Opis: {{ product.description }}</h2><br>-->
+<!--<h2>Vat: {{ product.vat }} zł</h2><br>-->
+<!--<h2>W magazynie: {{ product.stock }} szt.</h2><br>-->
+
+<!--{% for category in product.categories.all %}-->
+    <!--<h2>{{ category.category_name }}, </h2><br>-->
+<!--{% endfor %}-->
+
+<!--&lt;!&ndash;dodanie do koszyka&ndash;&gt;-->
+<!--<p class="price">{{ product.price }} zł</p>-->
+
+<!--<form action="{% url 'cart:cart_add' product.id %}" method="post">-->
+    <!--{{ cart_product_form }}-->
+    <!--{% csrf_token %}-->
+    <!--<input type="submit" value="Add to cart">-->
+<!--</form>-->
+
+
+
+
+
+
+   <div class="container">
+      <div class="row" style="margin-top: 6%">
+
+        <div class="col-sm-8 blog-main">
+
+          <div class="blog-post">
+              <div class="row">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="col-md-6 text-right">
+                            <img src="{{ product.book_logo.url }}" class="img-responsive" height='1200' width='800' />
+                        </div>
+                        <div class="col-md-6" style="padding-left: 20px">
+                            <h3>{{ product.name }}</h3>
+                            <h6><a href="{{ product.category.get_absolute_url }}">{{ product.category }}</a></h6>
+                            <p class="text-muted">{{ product.price }} zł</p>
+                            <form action="{% url 'cart:cart_add' product.id %}" method="post">
+                                {% csrf_token %}
+                                {{ cart_product_form }}
+                                <input type="submit" value="add to cart" class="btn btn-primary">
+                            </form>
+                            <p>{{ product.description|safe|linebreaksbr }}</p>
+                        </div>
+                    </div>
+                </div>
+              </div>
+
+
+          </div><!-- /.blog-post -->
+
+        </div><!-- /.blog-main -->
+      </div><!-- /.row -->
+
+    </div><!-- /.container -->
+
+
+
+<h2>Dodaj komentarz</h2>
+<form action="{% url 'detail' product.id %}" method="post">
+{% csrf_token %}
+{{form}}
+<input type="submit" value="Wduś guzik">
+</form>
+{% for comment in comments %}
+<p>{{comment.text}}</p>
+{% endfor %}
+
+
+
+
+    Powrót do listy ketegorii:
+    <a href="{% url 'index' %}"><input type="submit" value="Wduś guzik" class="btn btn-success"></a>
+
+
+{% endblock %}
+

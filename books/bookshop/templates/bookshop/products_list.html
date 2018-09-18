@@ -1,0 +1,50 @@
+{% extends "bookshop/base.html" %}
+{% block content %}
+
+{% load static %}
+
+
+
+    <ul>
+        <h3>Wszystkie książki:</h3><br>
+
+        {% for product in object_list %}
+
+        <div class="col-sm-4 col-lg-2">
+            <div class="thumbnail">
+
+
+                <a href="{% url 'detail' product.id %}">
+                    <img src="{{ product.book_logo.url }}" class="img-responsive" height='300' width='200' />
+                    <h2>{{ product.name }}</h2><br>
+
+
+                    {% for author in product.author.all %}
+                    <h2>{{ author.author_last_name }}</h2><br>
+                    {% endfor %}
+
+
+                    <!--dodanie do koszyka-->
+                    <p class="price">${{ product.price }}</p>
+                    <form action="{% url 'cart:cart_add' product.id %}" method="post">
+                        {{ cart_product_form }}
+                        {% csrf_token %}
+                        <input type="submit" value="Dodaj do koszyka">
+                    </form>
+                </a>
+            </div>
+
+            {% if user.is_authenticated %}
+                <a href="{% url 'product-update' product.id %}"><input type="submit" value="Edytuj produkt"></a>
+                <a href="{% url 'product-delete' product.id %}"><input type="submit" value="Usuń produkt"></a>
+            {% endif %}
+        </div>
+    </ul>
+
+
+        {% endfor %}
+
+
+
+
+{% endblock %}

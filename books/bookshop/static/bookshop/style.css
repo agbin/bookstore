@@ -1,0 +1,30 @@
+body{
+    background: url("images/fabric_plaid.png");
+}
+
+
+
+
+
+p {
+    font-family: 'Satisfy', Generic family: Serif, font-size: 30px;
+}
+
+h1 {
+    font-family: 'Satisfy' ;
+}
+
+#font-weight {
+    font-family: 'Satisfy' ;
+    color: #000099 ;
+    font-size: 30px;
+}
+
+div {
+
+}
+
+h2 {
+  text-align: center; color:blue ;
+}
+<h2 class="headertekst">Test 1</h2>

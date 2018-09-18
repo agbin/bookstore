@@ -1,0 +1,264 @@
+<!doctype html>
+
+<html>
+<head>
+
+    <title>BOOKSTORE</title>
+
+    {% load staticfiles %}
+
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'bookshop/style.css' %}" />
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Satisfy" />
+    <!--<link rel="stylesheet" href="sidebar.css">-->
+
+</head>
+
+<body>
+
+
+
+    <!--<nav class="navbar navbar-dark bg-primary">-->
+    <!--<nav class="navbar navbar-light" style="background-color: #3232ff;">-->
+
+    <nav class="navbar navbar-inverse">
+
+
+
+        <p class="container-fluid">
+
+        <!--Header-->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topNavBar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <a class="navbar-brand" href="{% url 'index' %}">BOOKSTORE</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div class="row">
+
+
+                <!-- koszyk-->
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="cart">
+                        {% with total_items=cart|length %}
+                            {% if cart|length > 0 %}
+                                <a href="{% url 'cart:cart_detail' %}" style="font-size:20px">
+                                    <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true" style="font-size:20px"> Koszyk:</span>
+                                {{ total_items }} szt., {{ cart.get_total_price }} zł
+                                </a>
+                            {% else %}
+                                <p class="navbar-text" style="font-size:20px">
+                                    <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true" style="font-size:20px"> Koszyk jest pusty.</span>
+                                </p>
+                                <!--<p class="navbar-text" style="font-size:20px">Koszyk jest pusty.</p>-->
+
+                            {% endif %}
+                        {% endwith %}
+                    </li>
+                </ul>
+
+
+                <!--login-->
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="">
+                        {% if user.is_authenticated %}
+                            <a href="{% url 'logout' %}">
+                                <span class="glyphicon glyphicon-off" aria-hidden="true" style="font-size:20px"> logout</span>&nbsp;,
+                                {{request.user.username}}
+                            </a>
+                        {% else %}
+                            <a href="{% url 'login' %}">
+                                <span class="glyphicon glyphicon-off" aria-hidden="true" style="font-size:20px"> login</span>&nbsp;
+                            </a>
+                        {% endif %}
+                    </li>
+                </ul>
+
+                <!--register-->
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="">
+
+                        <a href="{% url 'signup' %}">
+                            <span class="glyphicon glyphicon-user" aria-hidden="true" style="font-size:20px"> utwórz konto</span>&nbsp;
+                        </a>
+                    </li>
+                </ul>
+
+
+            </div>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+            <div class="row">
+
+
+                <!--Search-->
+                <form class="navbar-form navbar-center" role="search" method="post" action="{% url 'search' %}" style="width: 100%; text-align: center; margin: auto;">
+
+                <!--<div class="navbar-form navbar-center" role="search" method="post" action="{% url 'search' %}" style="width: 100%; text-align: center; margin: auto;">-->
+                    <!--action="{{a}}"-->
+                    {% csrf_token %}
+                    <div class="form-group" >
+                        <div class="input-group-btn search-panel input-group-lg">">
+                            <input type="text" class="form-control form-control-lg" name="name" value="" placeholder="Szukaj" style="font-size:17px, display:inline;">
+                            <!--form-control-lg-->
+                            <div class="input-group-btn search-panel input-group-lg" style="display:inline;">
+                                <select name="search_ch" class="form-control form-control-lg">
+                                    <option selected="selected" >Wszystko</option>
+                                    <option>Kategoria</option>
+                                    <option>Książka</option>
+                                    <option>Author</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-danger navbar-btn btn-lg"><span class="glyphicon glyphicon-search"></span></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+
+
+
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-3">
+            <!--{% load static %}-->
+            <!--<img src="{% static 'bookshop/images/4012ed07-23b0-40b2-a02d-d8655903aff4.png' %}" class="img-responsive"/>-->
+
+
+
+
+
+
+
+                <!--Kategorie-->
+                <ul class="nav navbar-nav">
+                    <li class="dropdown" style="font-size:30px">
+                        <a href="{% url 'index' %}" class="dropdown-toggle" data-toggle="dropdown">Kategorie<span class="caret" ></span></a>
+                            <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Structures</a>-->
+                            <ul class="dropdown-menu">
+
+                                 {% for category in categories %}
+                                    <li><a href="{% url 'category' category.slug %}" >{{ category.category_name }}</a></li>
+                                 {% endfor %}
+
+                            </ul>
+                    </li>
+                </ul>
+
+
+
+                <!--ksiazki-->
+                <ul class="nav navbar-nav">
+                    <li class="">
+                        <a href="{% url 'products' %}" style="font-size:30px">
+                            <!--<span class="glyphicon glyphicon-book" aria-hidden="true" style="font-size:30px"></span>&nbsp;-->
+                            Książki
+                        </a>
+                    </li>
+                </ul>
+
+
+
+                <!--Autorzy-->
+                <ul class="nav navbar-nav">
+                    <li class="dropdown" style="font-size:30px">
+                        <a href="{% url 'author-list' %}" class="dropdown-toggle" data-toggle="dropdown">Autorzy<span class="caret" ></span></a>
+                            <ul class="dropdown-menu">
+
+                                 {% for author in authors %}
+                                    <li><a href="{% url 'authors-products' author.id %}" >{{ author.author_last_name }}</a></li>
+                                 {% endfor %}
+
+                            </ul>
+                    </li>
+                </ul>
+
+
+
+
+
+                <!--dodaj ksiazke-->
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="">
+                        {% if user.is_authenticated %}
+                            <a href="{% url 'product-add' %}">
+                                <span class="glyphicon glyphicon-plus" aria-hidden="true" style="font-size:20px"></span>&nbsp;
+                                Dodaj książkę
+                            </a>
+                        {% endif %}
+                    </li>
+
+                </ul>
+
+                <!--dodaj kategorię-->
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="">
+                        {% if user.is_authenticated %}
+                            <a href="{% url 'category-add' %}">
+                                <span class="glyphicon glyphicon-plus" aria-hidden="true" style="font-size:20px"></span>&nbsp;
+                                Dodaj kategorię
+                            </a>
+                        {% endif %}
+                    </li>
+                </ul>
+
+                <!--dodaj autora-->
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="">
+                        {% if user.is_authenticated %}
+                            <a href="{% url 'author-add' %}">
+                                <span class="glyphicon glyphicon-plus" aria-hidden="true" style="font-size:20px"></span>&nbsp;
+                                Dodaj autora
+                            </a>
+                        {% endif %}
+                    </li>
+                </ul>
+
+
+
+
+            </div>
+        </div>
+
+
+
+    </nav>
+    <nav>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4" style="background-color: #FF9999">Born</div>
+                <div class="col-md-4" style="background-color: blue">to</div>
+                <div class="col-md-4" style="background-color: green">read</div>
+            </div>
+        </div>
+
+
+
+
+        {% block title %}
+        <div id='book'>
+            <div id="font-weight" ><h1><bold> Stworzeni do czytania</bold></h1></div>
+        </div>
+        {% endblock %}
+
+        <br><br>
+
+        {% block content %}
+        <div>
+            <p>
+                Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle poligraficznym. Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książki. Pięć wieków później zaczął być używany przemyśle elektronicznym, pozostając praktycznie niezmienionym. Spopularyzował się w latach 60. XX w. wraz z publikacją arkuszy Letrasetu, zawierających fragmenty Lorem Ipsum, a ostatnio z zawierającym różne wersje Lorem Ipsum oprogramowaniem przeznaczonym do realizacji druków na komputerach osobistych, jak Aldus PageMaker
+            </p>
+        </div>
+        {% endblock %}
+
+    </nav>
+</body>
+</html>

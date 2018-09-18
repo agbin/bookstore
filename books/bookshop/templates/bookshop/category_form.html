@@ -1,0 +1,28 @@
+{% extends "bookshop/base.html" %}
+{% block content %}
+
+{% load static %}
+
+
+    {% if object %}
+        <h2>Modyfikuj kategorię</h2>
+    {% else %}
+        <h2>Dodaj kategorię</h2>
+    {% endif %}
+
+        <form action="" method="post">
+            {% csrf_token %}
+            {{form.as_p}}
+
+            {% if request.user.is_superuser %}
+                {% if object %}
+                    <input type="submit" value="Modyfikuj" class="btn btn-success">
+                {% else %}
+                    <input type="submit" value="Dodaj" class="btn btn-success">
+                {% endif %}
+            {% endif %}
+
+        </form>
+    {{ result }}
+
+{% endblock %}
