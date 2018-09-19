@@ -18,16 +18,10 @@
 
 </head>
 
-<body>
-
-
-
     <!--<nav class="navbar navbar-dark bg-primary">-->
     <!--<nav class="navbar navbar-light" style="background-color: #3232ff;">-->
 
     <nav class="navbar navbar-inverse">
-
-
 
         <p class="container-fluid">
 
@@ -231,43 +225,47 @@
 
 
     </nav>
+<body>
     <nav>
-        <div class="container">
-            <div class="row" font-size="satisfy">
-                <div class="col-md-4" style="background-color: #FF9999">Born</div>
-                <div class="col-md-4" style="background-color: blue">to</div>
-                <div class="col-md-4" style="background-color: green">read</div>
-            </div>
-        </div>
-
-
-
-
-        {% block title %}
-        <div id='book'>
-            <div id="font-weight" ><h1><bold> Stworzeni do czytania</bold></h1></div>
-        </div><br><br>
-
-
-        <pre class="bg-danger" id="comment">
-            To jest wersja testowa sklepu. Wszystkie produkty są przypadkowe a ceny fikcyjne.
-            Transakcje kupna książek nie będą sfinalizowane (nawet po wduszeniu 'do kasy') więc bez konsekfencji
-            można próbować jak działa koszyk bez końca.
-
-        </pre>
-
-        {% endblock %}
-
-        <br><br>
-
-        {% block content %}
         <div>
-            <p>
-                Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle poligraficznym. Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książki. Pięć wieków później zaczął być używany przemyśle elektronicznym, pozostając praktycznie niezmienionym. Spopularyzował się w latach 60. XX w. wraz z publikacją arkuszy Letrasetu, zawierających fragmenty Lorem Ipsum, a ostatnio z zawierającym różne wersje Lorem Ipsum oprogramowaniem przeznaczonym do realizacji druków na komputerach osobistych, jak Aldus PageMaker
-            </p>
-        </div>
-        {% endblock %}
+            <!--<div class="container">-->
+                <!--<div class="row" font-size="satisfy">-->
+                    <!--<div class="col-md-4" style="background-color: #FF9999">Born</div>-->
+                    <!--<div class="col-md-4" style="background-color: blue">to</div>-->
+                    <!--<div class="col-md-4" style="background-color: green">read</div>-->
+                <!--</div>-->
+            <!--</div>-->
 
+
+
+
+            {% block title %}
+            <div id='book'>
+                <!--<br>-->
+                <div id="font-weight" ><h1><bold> Stworzeni do czytania</bold></h1></div>
+            </div><br><br>
+
+
+            <pre class="bg-danger" id="comment">
+                To jest wersja testowa sklepu. Wszystkie produkty są przypadkowe a ceny fikcyjne.
+                Transakcje kupna książek nie będą sfinalizowane (nawet po wduszeniu 'do kasy') więc bez konsekfencji
+                można próbować jak działa koszyk.
+
+            </pre>
+
+            {% endblock %}
+
+            <br><br>
+
+            {% block content %}
+            <div>
+                <p>
+                    Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle poligraficznym. Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książki. Pięć wieków później zaczął być używany przemyśle elektronicznym, pozostając praktycznie niezmienionym. Spopularyzował się w latach 60. XX w. wraz z publikacją arkuszy Letrasetu, zawierających fragmenty Lorem Ipsum, a ostatnio z zawierającym różne wersje Lorem Ipsum oprogramowaniem przeznaczonym do realizacji druków na komputerach osobistych, jak Aldus PageMaker
+                </p>
+            </div>
+            {% endblock %}
+
+        </div>
     </nav>
 </body>
 </html>
