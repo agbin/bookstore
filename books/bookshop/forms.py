@@ -44,7 +44,8 @@ class SearchForm(forms.Form):
 
 class CommentAddForm(forms.ModelForm):
     text = forms.CharField(widget=forms.Textarea(
-            attrs={'class': 'form-control', 'placeholder': 'Enter title here'}
+            attrs={'class': 'form-control', 'placeholder':'Cześć, jeżeli masz jakieś przemyślenia odnośnie tej książki, '
+                                                           'to inni czytelnicy czekają na Twój wpis..'}
         ))
 
     class Meta:

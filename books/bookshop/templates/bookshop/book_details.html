@@ -56,17 +56,17 @@
               </div>
 
 
-          </div><!-- /.blog-post -->
+          </div>
 
-        </div><!-- /.blog-main -->
-      </div><!-- /.row -->
+        </div>
+      </div>
 
-    </div><!-- /.container -->
+    </div>
 
 
 
 <h2>Dodaj komentarz</h2>
-<form action="{% url 'detail' product.id %}" method="post">
+<form action="{% url 'detail' product.id %}" method="post" id="danger">
 {% csrf_token %}
 {{form}}
 <input type="submit" value="Wduś guzik">
@@ -78,7 +78,7 @@
 
 
 
-    Powrót do listy ketegorii:
+    Powrót do strony głównej:
     <a href="{% url 'index' %}"><input type="submit" value="Wduś guzik" class="btn btn-success"></a>
 
 

@@ -17,7 +17,7 @@ h1 {
 #font-weight {
     font-family: 'Satisfy' ;
     color: #000099 ;
-    font-size: 30px;
+    font-size: 40px;
 }
 
 div {
@@ -28,3 +28,11 @@ h2 {
   text-align: center; color:blue ;
 }
 <h2 class="headertekst">Test 1</h2>
+
+#comment {
+    font-family: 'Satisfy'
+}
+
+#danger {
+     font-size: 3em;
+}

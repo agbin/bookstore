@@ -233,7 +233,7 @@
     </nav>
     <nav>
         <div class="container">
-            <div class="row">
+            <div class="row" font-size="satisfy">
                 <div class="col-md-4" style="background-color: #FF9999">Born</div>
                 <div class="col-md-4" style="background-color: blue">to</div>
                 <div class="col-md-4" style="background-color: green">read</div>
@@ -246,7 +246,16 @@
         {% block title %}
         <div id='book'>
             <div id="font-weight" ><h1><bold> Stworzeni do czytania</bold></h1></div>
-        </div>
+        </div><br><br>
+
+
+        <pre class="bg-danger" id="comment">
+            To jest wersja testowa sklepu. Wszystkie produkty są przypadkowe a ceny fikcyjne.
+            Transakcje kupna książek nie będą sfinalizowane (nawet po wduszeniu 'do kasy') więc bez konsekfencji
+            można próbować jak działa koszyk bez końca.
+
+        </pre>
+
         {% endblock %}
 
         <br><br>
