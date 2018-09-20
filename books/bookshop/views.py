@@ -38,7 +38,8 @@ class CategoryView(View):
     def get(self, request, slug):
         categories = Category.objects.all().order_by('category_name')
         products = Product.objects.filter(categories__slug=slug).order_by('name')
-        return render(request, 'bookshop/category_products.html', {'products': products, 'categories': categories})
+        cart_product_form = CartAddProductForm()
+        return render(request, 'bookshop/category_products.html', {'products': products, 'categories': categories, 'cart_product_form': cart_product_form})
 
 
 class CategoryCreate(CreateView):
@@ -58,6 +59,9 @@ class ProductsView(generic.ListView):
     def get_queryset(self):
         return Product.objects.all().order_by('name')
 
+    # def add_form(self, request):
+    #     form = CartAddProductForm()
+    #     return render(request, 'bookshop/products_list.html', {'form': form})
 
 class Login(View):
     def get(self, request):
@@ -184,7 +188,9 @@ class Authors_products(View):
     def get(self, request, id):
         authors = Author.objects.all().order_by('author_last_name')
         products = Product.objects.filter(author__id=id).order_by('name')
-        return render(request, 'bookshop/authors_products.html', {'products': products, 'authors': authors})
+        cart_product_form = CartAddProductForm()
+        return render(request, 'bookshop/authors_products.html', {'products': products, 'authors': authors,
+                                                                  'cart_product_form': cart_product_form})
 
 
 class AuthorCreate(CreateView):

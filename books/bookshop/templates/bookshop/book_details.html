@@ -24,15 +24,9 @@
 <!--</form>-->
 
 
-
-
-
-
    <div class="container">
       <div class="row" style="margin-top: 6%">
-
         <div class="col-sm-8 blog-main">
-
           <div class="blog-post">
               <div class="row">
                 <div class="card">
@@ -43,44 +37,33 @@
                         <div class="col-md-6" style="padding-left: 20px">
                             <h3>{{ product.name }}</h3>
                             <h6><a href="{{ product.category.get_absolute_url }}">{{ product.category }}</a></h6>
+
                             <p class="text-muted">{{ product.price }} zł</p>
                             <form action="{% url 'cart:cart_add' product.id %}" method="post">
                                 {% csrf_token %}
                                 {{ cart_product_form }}
                                 <input type="submit" value="add to cart" class="btn btn-primary">
                             </form>
+
                             <p>{{ product.description|safe|linebreaksbr }}</p>
                         </div>
                     </div>
                 </div>
               </div>
-
-
           </div>
-
         </div>
       </div>
-
     </div>
-
-
 
 <h2>Dodaj komentarz</h2>
 <form action="{% url 'detail' product.id %}" method="post" id="danger">
 {% csrf_token %}
 {{form}}
-<input type="submit" value="Wduś guzik">
+<input type="submit" value="Wduś guzik" class="btn btn-success">
 </form>
 {% for comment in comments %}
 <p>{{comment.text}}</p>
 {% endfor %}
-
-
-
-
-    Powrót do strony głównej:
-    <a href="{% url 'index' %}"><input type="submit" value="Wduś guzik" class="btn btn-success"></a>
-
 
 {% endblock %}
 

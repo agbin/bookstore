@@ -17,21 +17,19 @@
                 <a href="{% url 'detail' product.id %}">
                     <img src="{{ product.book_logo.url }}" class="img-responsive" height='300' width='200' />
                     <h2>{{ product.name }}</h2><br>
-
-
                     {% for author in product.author.all %}
-                    <h2>{{ author.author_last_name }}</h2><br>
+                    <h2>{{ author.author_first_name }} {{ author.author_last_name }}</h2><br>
                     {% endfor %}
-
+                </a>
 
                     <!--dodanie do koszyka-->
-                    <p class="price">{{ product.price }} zł</p>
-                    <form action="{% url 'cart:cart_add' product.id %}" method="post">
-                        {{ cart_product_form }}
-                        {% csrf_token %}
-                        <input type="submit" value="Dodaj do koszyka">
-                    </form>
-                </a>
+                    <h5 class="text-muted">{{ product.price }} zł</h5>
+                    <!--<form action="{% url 'cart:cart_add' product.id %}" method="post">-->
+                        <!--{% csrf_token %}-->
+                        <!--{{ form }}-->
+                        <!--<input type="submit" value="Dodaj do koszyka" class="btn btn-primary">-->
+                    <!--</form>-->
+
             </div>
 
             {% if user.is_authenticated %}

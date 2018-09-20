@@ -2,33 +2,29 @@
 {% block content %}
 
 
-
     <h2>Książki:</h2>
-
     <ul>
         {% for product in products %}
-
         <div class="col-sm-4 col-lg-2"></div>
             <div class="thumbnail"></div>
-
-
             <a href="{% url 'detail' product.id %}">
-                <img src="{{ product.book_logo.url }}" class="img-responsive" height='300' width='200' align-crnter/>
+                <img src="{{ product.book_logo.url }}" class="img-responsive" height='300' width='200' align="center"/>
                 <h2>{{ product.name }}</h2><br>
                 {% for author in product.author.all %}
                     <h2>{{ author.author_last_name }}</h2><br>
                 {% endfor %}
                 <h2>{{ product.description }}</h2><br>
-                <h5>{{ product.price }} zł</h5>
-
-
+                <h5 class="text-muted">{{ product.price }} zł</h5>
+                <form action="{% url 'cart:cart_add' product.id %}" method="post">
+                    {% csrf_token %}
+                    {{ cart_product_form }}
+                    <input type="submit" value="add to cart" class="btn btn-primary">
+                </form>
             </a>
             {% if request.user.is_superuser %}
                 <a href="{% url 'author-update' product.id %}"><input type="submit" value="Edytuj produkt" class="btn btn-success"></a>
             {% endif %}
         {% endfor %}
     </ul>
-
-
 
 {% endblock %}
