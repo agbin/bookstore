@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
 import os
+import dj_database_url
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -24,6 +25,7 @@ SECRET_KEY = 'xl#uo66j==t7($tw2qhv3j7&t^!epn46p$r!3g8_gm=sq)^ou!'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = bool(os.environ.get('DJANGO_DEBUG', True))
+#DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -168,3 +170,9 @@ CART_SESSION_ID = 'cart'
 
 MEDIA_ROOT= os.path.join(BASE_DIR, 'media/')
 MEDIA_URL= "/media/"
+
+#ALLOWED_HOSTS = ['127.0.0.1', '.herokuapp.com', 'localhost:8000']
+#db_from_env = dj_database_url.config(conn_max_age=500)
+#DATABASES['default'].update(db_from_env)
+
+
