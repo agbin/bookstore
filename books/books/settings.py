@@ -171,7 +171,7 @@ CART_SESSION_ID = 'cart'
 MEDIA_ROOT= os.path.join(BASE_DIR, 'media/')
 MEDIA_URL= "/media/"
 
-#ALLOWED_HOSTS = ['127.0.0.1', '.herokuapp.com', 'localhost:8000']
+ALLOWED_HOSTS = ['127.0.0.1', 'stdc.herokuapp.com']
 #db_from_env = dj_database_url.config(conn_max_age=500)
 #DATABASES['default'].update(db_from_env)
 
