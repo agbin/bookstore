@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="417d705b-70ef-4264-a648-5e6e32615f60" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/books/bookshop/static/bookshop/style.css" afterPath="$PROJECT_DIR$/books/bookshop/static/bookshop/style.css" />
-      <change beforePath="$PROJECT_DIR$/books/bookshop/templates/bookshop/base.html" afterPath="$PROJECT_DIR$/books/bookshop/templates/bookshop/base.html" />
-      <change beforePath="$PROJECT_DIR$/books/bookshop/templates/bookshop/index.html" afterPath="$PROJECT_DIR$/books/bookshop/templates/bookshop/index.html" />
-      <change beforePath="$PROJECT_DIR$/books/bookshop/templates/bookshop/products_list.html" afterPath="$PROJECT_DIR$/books/bookshop/templates/bookshop/products_list.html" />
+      <change beforePath="$PROJECT_DIR$/books/books/settings.py" afterPath="$PROJECT_DIR$/books/books/settings.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,21 +14,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="authors.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/books/bookshop/templates/bookshop/authors.html">
+      <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/books/orders/forms.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/books/bookshop/forms.py">
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/books/orders/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="902">
-              <caret line="46" column="45" lean-forward="false" selection-start-line="46" selection-start-column="45" selection-end-line="46" selection-end-column="45" />
+            <state relative-caret-position="506">
+              <caret line="24" column="15" lean-forward="false" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -40,8 +37,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/books/bookshop/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="25" column="60" lean-forward="false" selection-start-line="25" selection-start-column="60" selection-end-line="25" selection-end-column="60" />
+            <state relative-caret-position="968">
+              <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="63" selection-end-column="79" />
               <folding>
                 <element signature="e#0#54#0" expanded="true" />
               </folding>
@@ -49,35 +46,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="book_details.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/books/bookshop/templates/bookshop/book_details.html">
+      <file leaf-file-name="authors_products.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/books/bookshop/templates/bookshop/authors_products.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1496">
-              <caret line="68" column="69" lean-forward="false" selection-start-line="68" selection-start-column="69" selection-end-line="68" selection-end-column="69" />
+            <state relative-caret-position="418">
+              <caret line="19" column="27" lean-forward="false" selection-start-line="16" selection-start-column="16" selection-end-line="21" selection-end-column="23" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/books/bookshop/templates/bookshop/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-40">
-              <caret line="21" column="17" lean-forward="false" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/books/bookshop/templates/bookshop/base.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="248">
-              <caret line="229" column="12" lean-forward="false" selection-start-line="229" selection-start-column="12" selection-end-line="229" selection-end-column="12" />
-              <folding>
-                <marker date="1537367838798" expanded="false" signature="9615:9640" ph="..." />
-                <marker date="1537367838798" expanded="false" signature="9709:9731" ph="..." />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -85,19 +59,32 @@
       <file leaf-file-name="products_list.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/books/bookshop/templates/bookshop/products_list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
-              <caret line="27" column="59" lean-forward="false" selection-start-line="27" selection-start-column="59" selection-end-line="27" selection-end-column="59" />
+            <state relative-caret-position="440">
+              <caret line="20" column="46" lean-forward="false" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="46" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/books/bookshop/static/bookshop/style.css">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/books/books/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="880">
-              <caret line="40" column="16" lean-forward="false" selection-start-line="40" selection-start-column="16" selection-end-line="40" selection-end-column="16" />
+            <state relative-caret-position="244">
+              <caret line="26" column="36" lean-forward="false" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/books/bookshop/templates/bookshop/base.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="5434">
+              <caret line="247" column="22" lean-forward="false" selection-start-line="246" selection-start-column="17" selection-end-line="246" selection-end-column="34" />
+              <folding>
+                <marker date="1537377578785" expanded="false" signature="9615:9640" ph="..." />
+                <marker date="1537377578785" expanded="false" signature="9709:9731" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -105,8 +92,8 @@
       <file leaf-file-name="detaill.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/books/cart/templates/cart/detaill.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1518">
-              <caret line="69" column="88" lean-forward="false" selection-start-line="69" selection-start-column="88" selection-end-line="69" selection-end-column="88" />
+            <state relative-caret-position="418">
+              <caret line="19" column="47" lean-forward="false" selection-start-line="19" selection-start-column="47" selection-end-line="19" selection-end-column="47" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#a#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -114,11 +101,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/books/bookshop/models.py">
+      <file leaf-file-name="created.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/books/orders/templates/orders/order/created.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="836">
-              <caret line="40" column="31" lean-forward="false" selection-start-line="40" selection-start-column="31" selection-end-line="40" selection-end-column="31" />
+            <state relative-caret-position="154">
+              <caret line="7" column="25" lean-forward="false" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="create.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/books/orders/templates/orders/order/create.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="572">
+              <caret line="26" column="14" lean-forward="false" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -135,10 +132,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>name</find>
-      <find>row</find>
-      <find>drop</find>
-      <find>pen</find>
       <find>green</find>
       <find>koszyk</find>
       <find>sear</find>
@@ -165,6 +158,10 @@
       <find>author_list</find>
       <find>data-toggle=</find>
       <find>OrderI</find>
+      <find>white</find>
+      <find>product.price</find>
+      <find>add to</find>
+      <find>kosz</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -196,7 +193,6 @@
         <option value="$PROJECT_DIR$/books/orders/order/create.html" />
         <option value="$PROJECT_DIR$/books/orders/templates/orders/order/create.html" />
         <option value="$PROJECT_DIR$/books/orders/order/created.html" />
-        <option value="$PROJECT_DIR$/books/orders/templates/orders/order/created.html" />
         <option value="$PROJECT_DIR$/books/bookshop/templates/bookshop/comment.html" />
         <option value="$PROJECT_DIR$/books/bookshop/templates/product_confirm_delete.html" />
         <option value="$PROJECT_DIR$/books/bookshop/templates/bookshop/login.html" />
@@ -211,30 +207,31 @@
         <option value="$PROJECT_DIR$/books/bookshop/templates/bookshop/author_form.html" />
         <option value="$PROJECT_DIR$/books/bookshop/templates/bookshop/author_products.html" />
         <option value="$PROJECT_DIR$/books/bookshop/templates/bookshop/category_detail.html" />
-        <option value="$PROJECT_DIR$/books/books/settings.py" />
         <option value="$PROJECT_DIR$/books/bookshop/templates/bookshop/images.html" />
         <option value="$PROJECT_DIR$/books/bookshop/admin.py" />
         <option value="$PROJECT_DIR$/books/bookshop/context_processors.py" />
         <option value="$PROJECT_DIR$/books/bookshop/templates/bookshop/top.html" />
         <option value="$PROJECT_DIR$/books/bookshop/templates/bookshop/search.html" />
         <option value="$PROJECT_DIR$/books/bookshop/models.py" />
-        <option value="$PROJECT_DIR$/books/bookshop/templates/bookshop/category_products.html" />
-        <option value="$PROJECT_DIR$/books/bookshop/templates/bookshop/authors_products.html" />
         <option value="$PROJECT_DIR$/books/bookshop/templates/bookshop/authors.html" />
-        <option value="$PROJECT_DIR$/books/bookshop/views.py" />
         <option value="$PROJECT_DIR$/books/books/urls.py" />
         <option value="$PROJECT_DIR$/books/bookshop/forms.py" />
-        <option value="$PROJECT_DIR$/books/bookshop/templates/bookshop/book_details.html" />
-        <option value="$PROJECT_DIR$/books/cart/templates/cart/detaill.html" />
-        <option value="$PROJECT_DIR$/books/bookshop/templates/bookshop/products_list.html" />
         <option value="$PROJECT_DIR$/books/bookshop/static/bookshop/style.css" />
         <option value="$PROJECT_DIR$/books/bookshop/templates/bookshop/index.html" />
+        <option value="$PROJECT_DIR$/books/bookshop/templates/bookshop/category_products.html" />
+        <option value="$PROJECT_DIR$/books/bookshop/templates/bookshop/authors_products.html" />
+        <option value="$PROJECT_DIR$/books/bookshop/templates/bookshop/book_details.html" />
         <option value="$PROJECT_DIR$/books/bookshop/templates/bookshop/base.html" />
+        <option value="$PROJECT_DIR$/books/orders/templates/orders/order/created.html" />
+        <option value="$PROJECT_DIR$/books/cart/templates/cart/detaill.html" />
+        <option value="$PROJECT_DIR$/books/bookshop/views.py" />
+        <option value="$PROJECT_DIR$/books/bookshop/templates/bookshop/products_list.html" />
+        <option value="$PROJECT_DIR$/books/books/settings.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1685" />
+    <option name="x" value="213" />
     <option name="y" value="-4" />
     <option name="width" value="1426" />
     <option name="height" value="776" />
@@ -293,17 +290,51 @@
               <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="bookshop" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="bookstore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bookstore" type="462c0819:PsiDirectoryNode" />
+              <item name="books" type="462c0819:PsiDirectoryNode" />
+              <item name="cart" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bookstore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bookstore" type="462c0819:PsiDirectoryNode" />
+              <item name="books" type="462c0819:PsiDirectoryNode" />
+              <item name="cart" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bookstore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bookstore" type="462c0819:PsiDirectoryNode" />
+              <item name="books" type="462c0819:PsiDirectoryNode" />
+              <item name="cart" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="cart" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bookstore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bookstore" type="462c0819:PsiDirectoryNode" />
+              <item name="books" type="462c0819:PsiDirectoryNode" />
+              <item name="orders" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bookstore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bookstore" type="462c0819:PsiDirectoryNode" />
+              <item name="books" type="462c0819:PsiDirectoryNode" />
+              <item name="orders" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../heroku/new" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
@@ -389,10 +420,9 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1920" y="-4" width="1440" height="904" extended-state="6" />
-    <editor active="true" />
+    <frame x="81" y="-4" width="1839" height="1084" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30763888" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21533442" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -470,28 +500,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/books/cart/cart.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1342">
-          <caret line="63" column="8" lean-forward="false" selection-start-line="63" selection-start-column="8" selection-end-line="63" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/books/bookshop/static/bookshop/images/sidebar.css" />
-    <entry file="file://$PROJECT_DIR$/books/orders/templates/orders/order/create.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="26" column="14" lean-forward="false" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/books/orders/templates/orders/order/created.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="19" lean-forward="false" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/books/orders/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="440">
@@ -510,7 +519,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="10" column="16" lean-forward="false" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -541,13 +549,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/books/books/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3344">
-          <caret line="152" column="16" lean-forward="true" selection-start-line="152" selection-start-column="16" selection-end-line="152" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/books/bookshop/context_processors.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
@@ -558,13 +559,6 @@
     <entry file="file://$PROJECT_DIR$/books/bookshop/templates/bookshop/top.html" />
     <entry file="file://$PROJECT_DIR$/books/bookshop/templates/bookshop/category_detail.html" />
     <entry file="file://$PROJECT_DIR$/books/bookshop/templates/bookshop/dowyrzucenia.html" />
-    <entry file="file://$PROJECT_DIR$/books/bookshop/templates/bookshop/product_form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="20" column="24" lean-forward="false" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/books/bookshop/templates/bookshop/product_confirm_delete.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
@@ -607,20 +601,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/books/bookshop/templates/bookshop/category_products.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="24" column="40" lean-forward="false" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/books/bookshop/templates/bookshop/authors_products.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/books/bookshop/templates/bookshop/author_form.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -642,30 +622,93 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/books/orders/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#24#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/books/bookshop/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="25" column="60" lean-forward="false" selection-start-line="25" selection-start-column="60" selection-end-line="25" selection-end-column="60" />
-          <folding>
-            <element signature="e#0#54#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/books/bookshop/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="836">
           <caret line="40" column="31" lean-forward="false" selection-start-line="40" selection-start-column="31" selection-end-line="40" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/books/bookshop/templates/bookshop/authors.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/books/bookshop/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="902">
+          <caret line="46" column="45" lean-forward="false" selection-start-line="46" selection-start-column="45" selection-end-line="46" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/books/bookshop/static/bookshop/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="880">
+          <caret line="40" column="16" lean-forward="false" selection-start-line="40" selection-start-column="16" selection-end-line="40" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/books/bookshop/templates/bookshop/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-40">
+          <caret line="21" column="17" lean-forward="false" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/books/bookshop/templates/bookshop/category_products.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="23" column="74" lean-forward="false" selection-start-line="23" selection-start-column="61" selection-end-line="23" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/books/bookshop/templates/bookshop/book_details.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="47" column="28" lean-forward="false" selection-start-line="47" selection-start-column="28" selection-end-line="47" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/books/cart/cart.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="693">
+          <caret line="63" column="8" lean-forward="false" selection-start-line="63" selection-start-column="8" selection-end-line="63" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/books/bookshop/templates/bookshop/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5434">
+          <caret line="247" column="22" lean-forward="false" selection-start-line="246" selection-start-column="17" selection-end-line="246" selection-end-column="34" />
+          <folding>
+            <marker date="1537377578785" expanded="false" signature="9615:9640" ph="..." />
+            <marker date="1537377578785" expanded="false" signature="9709:9731" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/books/orders/templates/orders/order/created.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="25" lean-forward="false" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/books/orders/templates/orders/order/create.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="26" column="14" lean-forward="false" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/books/orders/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -674,75 +717,58 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="506">
           <caret line="24" column="15" lean-forward="false" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/books/bookshop/templates/bookshop/authors.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/books/bookshop/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="902">
-          <caret line="46" column="45" lean-forward="false" selection-start-line="46" selection-start-column="45" selection-end-line="46" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/books/bookshop/templates/bookshop/book_details.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1496">
-          <caret line="68" column="69" lean-forward="false" selection-start-line="68" selection-start-column="69" selection-end-line="68" selection-end-column="69" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/books/cart/templates/cart/detaill.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1518">
-          <caret line="69" column="88" lean-forward="false" selection-start-line="69" selection-start-column="88" selection-end-line="69" selection-end-column="88" />
+        <state relative-caret-position="418">
+          <caret line="19" column="47" lean-forward="false" selection-start-line="19" selection-start-column="47" selection-end-line="19" selection-end-column="47" />
           <folding>
             <element signature="n#style#0;n#img#0;n#a#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/books/bookshop/static/bookshop/style.css">
+    <entry file="file://$PROJECT_DIR$/books/bookshop/templates/bookshop/authors_products.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="880">
-          <caret line="40" column="16" lean-forward="false" selection-start-line="40" selection-start-column="16" selection-end-line="40" selection-end-column="16" />
+        <state relative-caret-position="418">
+          <caret line="19" column="27" lean-forward="false" selection-start-line="16" selection-start-column="16" selection-end-line="21" selection-end-column="23" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/books/bookshop/templates/bookshop/product_form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="20" column="24" lean-forward="false" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/books/bookshop/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="968">
+          <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="63" selection-end-column="79" />
+          <folding>
+            <element signature="e#0#54#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/books/bookshop/templates/bookshop/products_list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="27" column="59" lean-forward="false" selection-start-line="27" selection-start-column="59" selection-end-line="27" selection-end-column="59" />
+        <state relative-caret-position="440">
+          <caret line="20" column="46" lean-forward="false" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="46" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/books/bookshop/templates/bookshop/index.html">
+    <entry file="file://$PROJECT_DIR$/books/books/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-40">
-          <caret line="21" column="17" lean-forward="false" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
+        <state relative-caret-position="244">
+          <caret line="26" column="36" lean-forward="false" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/books/bookshop/templates/bookshop/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="229" column="12" lean-forward="false" selection-start-line="229" selection-start-column="12" selection-end-line="229" selection-end-column="12" />
-          <folding>
-            <marker date="1537367838798" expanded="false" signature="9615:9640" ph="..." />
-            <marker date="1537367838798" expanded="false" signature="9709:9731" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
