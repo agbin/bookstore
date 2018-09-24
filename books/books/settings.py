@@ -176,3 +176,9 @@ MEDIA_URL= "/media/"
 #DATABASES['default'].update(db_from_env)
 
 
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
+
+
