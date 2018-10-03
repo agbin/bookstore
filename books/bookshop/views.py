@@ -16,6 +16,7 @@ from rest_framework import generics
 from cart.forms import CartAddProductForm
 from orders.models import OrderItem
 from django.contrib.auth.forms import UserCreationForm
+from datetime import datetime
 
 
 
@@ -59,9 +60,6 @@ class ProductsView(generic.ListView):
     def get_queryset(self):
         return Product.objects.all().order_by('name')
 
-    # def add_form(self, request):
-    #     form = CartAddProductForm()
-    #     return render(request, 'bookshop/products_list.html', {'form': form})
 
 class Login(View):
     def get(self, request):
@@ -156,7 +154,8 @@ class Product_detail(View):
         if form.is_valid():
             Comment.objects.create(
                 text=form.cleaned_data['text'],
-                book=book
+                book=book,
+                name=form.cleaned_data['name'],
             )
             return redirect("detail", pk)
 

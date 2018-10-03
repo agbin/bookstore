@@ -23,47 +23,56 @@
     <!--<input type="submit" value="Add to cart">-->
 <!--</form>-->
 
+<div class="container">
+  <div class="row" style="margin-top: 6%">
+    <div class="col-sm-8 blog-main">
+      <div class="blog-post">
+          <div class="row">
+            <div class="card">
+                <div class="card-body">
+                    <div class="col-md-6 text-right">
+                        <img src="{{ product.book_logo.url }}" class="img-responsive" height='1200' width='800' />
+                    </div>
+                    <div class="col-md-6" style="padding-left: 20px">
+                        <h1>{{ product.name }}</h1>
+                        <h6><a href="{{ product.category.get_absolute_url }}">{{ product.category }}</a></h6>
 
-   <div class="container">
-      <div class="row" style="margin-top: 6%">
-        <div class="col-sm-8 blog-main">
-          <div class="blog-post">
-              <div class="row">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="col-md-6 text-right">
-                            <img src="{{ product.book_logo.url }}" class="img-responsive" height='1200' width='800' />
-                        </div>
-                        <div class="col-md-6" style="padding-left: 20px">
-                            <h3>{{ product.name }}</h3>
-                            <h6><a href="{{ product.category.get_absolute_url }}">{{ product.category }}</a></h6>
-
-                            <p class="text-muted">{{ product.price }} zł</p>
-                            <form action="{% url 'cart:cart_add' product.id %}" method="post">
-                                {% csrf_token %}
-                                {{ cart_product_form }}
-                                <input type="submit" value="add to cart" class="btn btn-primary">
-                            </form>
-
-                            <p>{{ product.description|safe|linebreaksbr }}</p>
-                        </div>
+                        <p class="text-muted">{{ product.price }} zł</p>
+                        <form action="{% url 'cart:cart_add' product.id %}" method="post", style="font-size: 18pt">
+                            {% csrf_token %}
+                            {{ cart_product_form }}
+                            <input type="submit" value="add to cart" class="btn btn-primary">
+                        </form>
+                        <p style="font-size: 18pt">{{ product.description|safe|linebreaksbr }}</p><br><br>
                     </div>
                 </div>
-              </div>
+            </div>
           </div>
-        </div>
       </div>
     </div>
+  </div>
+</div>
 
-<h2>Dodaj komentarz</h2>
-<form action="{% url 'detail' product.id %}" method="post" id="danger">
-{% csrf_token %}
-{{form}}
-<input type="submit" value="Wduś guzik" class="btn btn-success">
-</form>
-{% for comment in comments %}
-<p>{{comment.text}}</p>
-{% endfor %}
+<h1 align="center">Dodaj komentarz</h1>
+   <div class="container">
+        <form action="{% url 'detail' product.id %}" method="post" id="danger" style="font-size: 18pt">
+        {% csrf_token %}
+            <img src="{% static 'bookshop/images/if_user_1287507.png' %}" style="max-width:5%"; />
+            {{form}}
+            <input type="submit" value="Wduś guzik" class="btn btn-success btn-lg">
+        </form><br>
+        {% for comment in comments %}
+           <div class="col-md-8">
+               <div class="comment">
+                   <div class="date"><strong>{{ comment.name }}</strong>, {{ comment.created_date }}</div>
+                   <p style="font-size: 18px">{{comment.text}}</p><br>
+               </div>
+           </div>
+        {% endfor %}
+   </div>
+
+
+
 
 {% endblock %}
 

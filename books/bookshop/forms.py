@@ -43,14 +43,18 @@ class SearchForm(forms.Form):
 
 
 class CommentAddForm(forms.ModelForm):
-    text = forms.CharField(widget=forms.Textarea(
+
+    text = forms.CharField(label='', widget=forms.Textarea(
             attrs={'class': 'form-control', 'placeholder':'Cześć, jeżeli masz jakieś przemyślenia odnośnie tej książki, '
                                                            'to inni czytelnicy czekają na Twój wpis..'}
         ))
+    name = forms.CharField(label='', widget=forms.TextInput(
+            attrs={'placeholder': 'Imię:', 'size': '15px'}))
 
     class Meta:
         model = Comment
-        fields = ('text',)
+        fields = ('name', 'text',)
+        
 
 
 

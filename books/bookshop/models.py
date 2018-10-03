@@ -1,6 +1,8 @@
 from django.db import models
 from decimal import Decimal
 from django.urls import reverse
+from datetime import datetime
+from django.utils import timezone
 
 class Category(models.Model):
     category_name = models.CharField(max_length=64)
@@ -37,23 +39,18 @@ class Product(models.Model):
     categories = models.ManyToManyField(Category, blank=True, verbose_name="kategorie")
     book_logo = models.FileField(max_length=1000, upload_to='products/%Y/%m/%d')
 
-
     def get_absolute_url(self):
         return reverse('detail', kwargs={'pk': self.pk})
-
-    # def get_absolute_url(self):
-    #     return reverse('detaill', args=[self.pk, self.slug])
-
 
     def __str__(self):
         return self.name
 
 
-
-
-
 class Comment(models.Model):
+    created_date = models.DateTimeField(default=timezone.now)
+    name = models.CharField(max_length=200)
     text = models.TextField()
+    
     book = models.ForeignKey(Product, on_delete=models.CASCADE, null=True, blank=True)
     # reply_to = models.ForeignKey("self", null=True, blank=True, on_delete=models.CASCADE, related_name='replies')
 
