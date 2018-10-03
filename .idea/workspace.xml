@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="417d705b-70ef-4264-a648-5e6e32615f60" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/books/books/settings.py" afterPath="$PROJECT_DIR$/books/books/settings.py" />
-      <change beforePath="$PROJECT_DIR$/books/bookshop/forms.py" afterPath="$PROJECT_DIR$/books/bookshop/forms.py" />
-      <change beforePath="$PROJECT_DIR$/books/bookshop/models.py" afterPath="$PROJECT_DIR$/books/bookshop/models.py" />
-      <change beforePath="$PROJECT_DIR$/books/bookshop/static/bookshop/style.css" afterPath="$PROJECT_DIR$/books/bookshop/static/bookshop/style.css" />
-      <change beforePath="$PROJECT_DIR$/books/bookshop/templates/bookshop/book_details.html" afterPath="$PROJECT_DIR$/books/bookshop/templates/bookshop/book_details.html" />
-      <change beforePath="$PROJECT_DIR$/books/bookshop/views.py" afterPath="$PROJECT_DIR$/books/bookshop/views.py" />
-    </list>
+    <list default="true" id="417d705b-70ef-4264-a648-5e6e32615f60" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -240,11 +232,11 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1847" />
-    <option name="y" value="-4" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="177" />
+    <option name="y" value="190" />
     <option name="width" value="1438" />
-    <option name="height" value="904" />
+    <option name="height" value="876" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -390,10 +382,9 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1920" y="-4" width="1440" height="904" extended-state="6" />
-    <editor active="true" />
+    <frame x="177" y="190" width="1438" height="876" extended-state="0" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.077083334" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.07719054" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985657" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
