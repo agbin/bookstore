@@ -1,5 +1,5 @@
 # Bookstore
-The project aims to create a platform for the sale of books. 
+The project aims to create a platform for the sale of books. <br  />
 The project consists of three applications: 
 1) bookshop - collecting books, 
 2) cart - a collection of selected items,
